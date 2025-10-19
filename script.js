@@ -31,8 +31,6 @@ document.getElementById('waitlistForm').addEventListener('submit', async functio
 
         // Show success message (duplicates are handled silently on the backend)
         if (result.success) {
-            console.log('Email submitted successfully:', email);
-
             // Show success message
             successMessage.classList.add('show');
             emailInput.value = '';
@@ -46,7 +44,6 @@ document.getElementById('waitlistForm').addEventListener('submit', async functio
         }
 
     } catch (error) {
-        console.error('Error submitting email:', error);
         alert('Oops! Something went wrong. Please try again.');
     } finally {
         // Re-enable button
