@@ -21,7 +21,9 @@ document.getElementById('waitlistForm').addEventListener('submit', async functio
             body: JSON.stringify({
                 email: email,
                 source: 'prelaunch-page',
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                referer: window.location.href,
+                origin: window.location.origin
             })
         });
 
